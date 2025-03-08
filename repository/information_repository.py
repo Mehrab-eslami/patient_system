@@ -20,7 +20,7 @@ class InformationRepository:
         self.connect()
         self.cursor.execute(
             "INSERT INTO patient_db.information (visit_date_time, hospital, prescription, extra_data) VALUES (%s,%s,%s,%s)",
-            [PatientInformation.visit_date_time, PatientInformation.hospital, PatientInformation.prescription, PatientInformation.extra_data]
+            [patient_information.visit_date_time, patient_information.hospital, patient_information.prescription, patient_information.extra_data]
         )
         self.connection.commit()
         self.disconnect()
@@ -29,7 +29,7 @@ class InformationRepository:
         self.connect()
         self.cursor.execute(
             "UPDATE patient_db.information SET visit_date_time=%s, hospital=%s, prescription=%s, extra_data=%s WHERE in_id=%s",
-            [patient_information.visit_date_time, patient_information.hospital, PatientInformation.prescription, PatientInformation.extra_data, PatientInformation.id]
+            [patient_information.visit_date_time, patient_information.hospital, patient_information.prescription, patient_information.extra_data, patient_information.id]
         )
         self.connection.commit()
         self.disconnect()
