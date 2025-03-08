@@ -2,6 +2,7 @@ import re
 from datetime import date, datetime
 
 from model.person import Person
+from repository import information_repository
 
 
 def person_validator(person):
@@ -22,3 +23,7 @@ def person_validator(person):
     #     errors.append({"field": "birth_date", "message": "invalid birth_date"})
     return errors
 
+def information_validator(information):
+    errors = []
+    if not type(information) == str or not re.match(r"^[a-zA-Z\s]{3,30}$", information):
+        errors.append({"field": "information", "message": "invalid information"})
