@@ -47,16 +47,16 @@ class InformationRepository:
         self.disconnect()
         return PatientInformation_list
 
-    def find_by_id(self, patientInformation_id):
+    def find_by_id(self, patient_information_id):
         self.connect()
-        self.cursor.execute("SELECT * FROM patient_db.information WHERE in_id=%s", [patientInformation_id])
-        PatientInformation = self.cursor.fetchone()
+        self.cursor.execute("SELECT * FROM patient_db.information WHERE in_id=%s", [patient_information_id])
+        patient_information_id = self.cursor.fetchone()
         self.disconnect()
-        return PatientInformation
+        return patient_information_id
 
     def find_by_hospital(self, hospital_id):
         self.connect()
         self.cursor.execute("SELECT * FROM patient_db.information WHERE hospital_id=%s", [hospital_id])
-        PatientInformation = self.cursor.fetchone()
+        patient_information = self.cursor.fetchone()
         self.disconnect()
-        return PatientInformation
+        return patient_information

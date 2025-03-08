@@ -4,6 +4,6 @@ from repository.database_maker import create_database
 create_database()
 
 # ui = PersonView()
-# ui = BookView()
-# ui = BorrowView()
+# ui = informationView()
+# ui = prescriptionView()
 
