@@ -8,7 +8,7 @@ class InformationRepository:
             host="localhost",
             user="root",
             passwd="<root1234>",
-            database="mehrab_PIS_app"
+            database="patient_db"
         )
         self.cursor = self.connection.cursor()
 
