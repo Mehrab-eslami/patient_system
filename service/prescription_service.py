@@ -24,5 +24,5 @@ class PrescriptionService:
     def find_by_doctor_and_drug(self, doctor, drug):
         return self.repo.find_by_doctor_and_drug(doctor, drug)
 
-    def find_by_dosage_and_password(self, dosage, password):
+    def find_by_dosage_and_password(self, dosage, description):
         return self.repo.find_by_dosage_and_description(dosage, description)
