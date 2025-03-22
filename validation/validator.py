@@ -2,7 +2,7 @@ import re
 from datetime import date, datetime
 
 from model.person import Person
-from repository import information_repository
+from model.information import PatientInformation
 
 
 def person_validator(person):

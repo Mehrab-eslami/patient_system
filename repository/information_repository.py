@@ -1,5 +1,4 @@
-import _mysql_connector
-import mysql
+import mysql.connector
 from model.information import PatientInformation
 
 class InformationRepository:

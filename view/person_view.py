@@ -83,9 +83,9 @@ class PersonView:
         self.username = LabelAndEntry(self.win, "Username", 20, 180, StringVar, 65)
         self.password = LabelAndEntry(self.win, "Password", 20, 220, StringVar, 65, show="*")
 
-        Button(self.win, text="Save", width=7, command=self.save_click).place(x=20, y=280)
-        Button(self.win, text="Edit", width=7, command=self.edit_click).place(x=85, y=280)
-        Button(self.win, text="Remove", width=7, command=self.remove_click).place(x=150, y=280)
+        Button(self.win, text="Add Patient", width=8, command=self.save_click).place(x=30, y=280)
+        Button(self.win, text="Edit", width=7, command=self.edit_click).place(x=98, y=280)
+        Button(self.win, text="Remove", width=7, command=self.remove_click).place(x=160, y=280)
 
         self.table = Table(
             self.win,

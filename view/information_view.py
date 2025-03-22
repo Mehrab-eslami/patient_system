@@ -82,7 +82,7 @@ class InformationView:
         self.prescription = LabelAndEntry(self.win, "Prescription", 20, 180, StringVar, 90)
         self.extra_data = LabelAndEntry(self.win, "Extra_Data", 20, 220, StringVar, 90)
 
-        Button(self.win, text="Save", width=7, command=self.save_click).place(x=20, y=280)
+        Button(self.win, text="search", width=7, command=self.save_click).place(x=20, y=280)
         Button(self.win, text="Edit", width=7, command=self.edit_click).place(x=85, y=280)
         Button(self.win, text="Remove", width=7, command=self.remove_click).place(x=150, y=280)
 
