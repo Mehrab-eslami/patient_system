@@ -12,8 +12,8 @@ class InformationService:
     def edit(self, information):
         self.repository.edit(information)
 
-    def remove(self, information):
-        self.repository.remove(information)
+    def remove(self, information_id):
+        self.repository.remove(information_id)
 
     def find_all(self):
         self.repository.find_all()

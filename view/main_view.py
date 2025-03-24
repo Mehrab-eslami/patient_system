@@ -1,7 +1,7 @@
 import tkinter
 from tkinter import *
 from PIL import ImageTk, Image
-
+from view.prescription_view import PrescriptionView
 from view.person_view import PersonView
 from view.information_view import InformationView
 
@@ -12,6 +12,9 @@ class MainView:
 
     def information_view(self):
         ui = InformationView()
+
+    def prescription_view(self):
+        ui = PrescriptionView()
 
     def __init__(self):
         win = Tk()
@@ -25,6 +28,6 @@ class MainView:
 
         Button(win, text="Persons", width=15, height=2, command=self.person_view).place(x=50, y=30)
         Button(win, text="Informations", width=15, height=2, command=self.information_view).place(x=50, y=90)
-        Button(win, text="Prescriptions", width=15, height=2, command=self.information_view).place(x=50, y=150)
+        Button(win, text="Prescriptions", width=15, height=2, command=self.prescription_view).place(x=50, y=150)
 
         win.mainloop()

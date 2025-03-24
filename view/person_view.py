@@ -60,8 +60,9 @@ class PersonView:
         self.table.show_data(self.controller.find_all())
 
     def select_table(self, selected_row):
-        # todo : error
-        person = Person(*selected_row)
+        global person
+        if selected_row and len(selected_row) > 5:
+            person = Person(*selected_row)
         self.id.set(person.id)
         self.name.set(person.name)
         self.family.set(person.family)
