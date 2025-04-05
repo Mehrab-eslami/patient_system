@@ -1,6 +1,6 @@
 create database patient_db;
 
---
+
 
 create table patient_db.persons
 (

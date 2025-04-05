@@ -13,6 +13,15 @@ from validation.validator import person_validator
 
 #person_controller = PersonController()
 #print(person_controller.save("Omid11", "Safaii", date(2000, 1, 1), "om_s", "omid123"))
+person = Person(
+    name="John",
+    family="Doe",
+    birth_date="03/15/1995",
+    username="johndoe",
+    password="password123"
+)
+errors = person_validator(person)
+print(errors)  # انتظار می‌رود لیست خالی برگردد.
 
 #repo = PersonRepository()
 #person = Person(100, 'ahmadreza', 'mohseni', '2010-7-29','ali', 'ali123')

@@ -58,15 +58,15 @@ class PrescriptionView:
 
 
     def select_table(self, selected_row):
-        global prescription
-        if selected_row and len(selected_row) > 5:
+        global Prescription
+        if selected_row and len(selected_row) > 12:
             prescription = Prescription(*selected_row)
-        self.id.set(prescription.id)
-        self.date_time.set(prescription.date_time)
-        self.doctor.set(prescription.doctor)
-        self.drug.set(prescription.drug)
-        self.dosage.set(prescription.dosage)
-        self.description.set(prescription.description)
+        self.id.set(Prescription.id)
+        self.date_time.set(Prescription.date_time)
+        self.doctor.set(Prescription.doctor)
+        self.drug.set(Prescription.drug)
+        self.dosage.set(Prescription.dosage)
+        self.description.set(Prescription.description)
 
     def __init__(self):
         self.controller = PrescriptionController()

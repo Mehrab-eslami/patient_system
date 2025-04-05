@@ -59,8 +59,12 @@ class InformationView:
         self.table.show_data(self.controller.find_all())
 
     def select_table(self, selected_row):
-        # todo : error
-        information = PatientInformation(*selected_row)
+        print(selected_row)  # بررسی محتوا برای دیباگ
+        try:
+            information = PatientInformation(*selected_row[:6])  # پاس دادن 6 آیتم اول
+        except TypeError as e:
+            print(f"Error: {e}")  # مدیریت خطا در صورت اختلاف آرگومان‌ها
+
         self.id.set(information.id)
         self.person.set(information.person)
         self.hospital.set(information.hospital)

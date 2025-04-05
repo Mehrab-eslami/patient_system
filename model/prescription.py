@@ -1,8 +1,6 @@
-import mysql.connector
-
 class Prescription:
-    def __init__(self, date_time, doctor, drug, dosage, description):
-        self.id = None
+    def __init__(self, id=None, date_time=None, doctor="", drug="", dosage="", description=""):
+        self.id = id
         self.date_time = date_time
         self.doctor = doctor
         self.drug = drug

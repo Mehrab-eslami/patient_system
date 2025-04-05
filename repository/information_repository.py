@@ -2,6 +2,8 @@ import mysql.connector
 from model.information import PatientInformation
 
 class InformationRepository:
+    def __init__(self):
+        self.connection = None
     def connect(self):
         self.connection = mysql.connector.connect(
             host="localhost",
